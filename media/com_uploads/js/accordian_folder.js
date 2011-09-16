@@ -4,8 +4,12 @@ window.addEvent('domready', function () {
 		child.addClass('hide');
 		
 		folder.addEvent('click', function (e) {
-			e.stop();
-			child.toggleClass('hide')
+			if (e.target !== folder) {
+				console.log(e.target);
+			} else {
+				e.stop();
+				child.toggleClass('hide')
+			}
 		});
 	});
 });
