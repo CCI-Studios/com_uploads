@@ -12,7 +12,7 @@
 
 	<form action="<?= @route('view=files') ?>" method="get" class="-koowa-grid">
 
-		<?= @helper('listbox.sets') ?>
+		<?= @helper('site::com.uploads.template.helper.listbox.sets', array('filter' => array('enabled' => '1'))) ?>
 		<input type="submit" value="Go" />
 	</form>
 </div>

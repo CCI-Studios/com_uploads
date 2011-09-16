@@ -8,7 +8,7 @@ class ComUploadsModelSets extends KModelTable
 		parent::__construct($config);
 		
 		$this->_state
-			->insert('password', 'string', '');
+			->insert('enabled', 'int', 1);
 	}
 
 	protected function _buildQueryWhere(KDatabaseQuery $query)
@@ -16,8 +16,8 @@ class ComUploadsModelSets extends KModelTable
 		$state = $this->_state;
 		$app = JFactory::getApplication();
 		
-		if ($app->name == 'site') {
-			echo "password: \"". $state->password ."\"";
+		if ($app->getName() == 'site') {
+			$query->where('enabled', '=', '1');
 		}
 		
 		

@@ -10,6 +10,7 @@
 				<th width="150px"><?= @helper('grid.sort', array('column' => 'folder')) ?></th>
 				<th width="150px"><?= @text('Password') ?></th>
 			
+				<!-- <th width="1%"><?= @helper('grid.sort', array('column'=>'enabled')) ?></th> -->
 				<th width="1%"><?= @text('id') ?></th>
 			</tr>
 		</thead>
@@ -25,6 +26,7 @@
 				<td align="center"><?= $set->folder ?></td>
 				<td align="center"><?= $set->password ?></td>
 				
+				<!-- <td align="center"><?= @helper('grid.enable', array('row' => $set)) ?></td> -->
 				<td align="center"><?= $set->id ?></td>
 			</tr>
 			<? endforeach; ?>
