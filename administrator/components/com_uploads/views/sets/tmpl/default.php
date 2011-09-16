@@ -1,5 +1,4 @@
-
-<script src="media::/lib_koowa/js/koowa.js" />
+<script src="media://lib_koowa/js/koowa.js" />
 
 <form action="<?= @route() ?>" method="get" class="-koowa-grid">
 	<table class="adminlist">
