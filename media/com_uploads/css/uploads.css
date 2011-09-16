@@ -1,0 +1,40 @@
+.uploads form .fields {
+	margin: 0.2em 0;
+	clear: both;
+}
+
+.uploads form .fields label {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 150px;
+	margin-right: 10px;
+	
+	text-align: right;
+}
+
+.uploads form .fields input[type="submit"] {
+	margin-left: 167px;
+}
+
+.uploads ul {
+	margin: 1em 0 1em 1.5em;
+	list-style: disc;
+}
+
+.uploads ul {
+	opacity: 1;
+	overflow: hidden;
+	height: auto;
+	
+	-webkit-transition: all 0.4s linear;
+}
+
+.uploads ul ul {
+	margin: 0 0 0 1.5em;
+}
+
+.uploads ul.hide {
+	opacity: 0;
+	height: 0;
+}
