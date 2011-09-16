@@ -10,6 +10,14 @@ class ComUploadsModelSets extends KModelTable
 		$this->_state
 			->insert('enabled', 'int', 1);
 	}
+	
+	protected function _buildQueryOrder(KDatabaseQuery $query) {
+ 		if (!$this->_state->sort) {
+ 	 		$query->order('title', 'ASC');
+ 		}
+
+		parent::_buildQueryOrder($query);
+ 	}
 
 	protected function _buildQueryWhere(KDatabaseQuery $query)
 	{
@@ -19,7 +27,6 @@ class ComUploadsModelSets extends KModelTable
 		if ($app->getName() == 'site') {
 			$query->where('enabled', '=', '1');
 		}
-		
 		
 		parent::_buildQueryWhere($query);
 	}
