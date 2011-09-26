@@ -8,6 +8,8 @@ class ComUploadsModelSets extends KModelTable
 		parent::__construct($config);
 		
 		$this->_state
+			->insert('title', 'string')
+			->insert('password', 'string')
 			->insert('enabled', 'int', 1);
 	}
 	
@@ -25,8 +27,16 @@ class ComUploadsModelSets extends KModelTable
 		$app = JFactory::getApplication();
 		
 		if ($app->getName() == 'site') {
-			$query->where('enabled', '=', '1');
+			$query->where('tbl.enabled', '=', '1');
 		}
+		
+		if ($state->title) {
+			$query->where('tbl.title', '=', $state->title);
+		}
+		
+		if ($state->password) {
+			$query->where('tbl.password', '=', $state->password);
+		}		
 		
 		parent::_buildQueryWhere($query);
 	}

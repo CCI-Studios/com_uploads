@@ -6,11 +6,7 @@
 <h1 class="pagetitle"><?= $set_name ?></h1>
 
 <div class="uploads">
-	<? if ($verified): ?>
-		<?= @helper('filelist.files', array('list'=>$list, 'path'=>$path)) ?>
-	<? else: ?>
-		<?= @template('default_password') ?>
-	<? endif; ?>
+	<?= @helper('filelist.files', array('list'=>$list, 'path'=>$path)) ?>
 
 	<p>&lt;&lt;&nbsp;Go <a href="<?= @route('view=sets&Itemid=12') ?>">back</a></p>
 </div>

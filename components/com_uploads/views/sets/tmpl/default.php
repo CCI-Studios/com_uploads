@@ -10,9 +10,22 @@
 		<p><?= $description ?></p>
 	<? endif; ?>
 
-	<form action="<?= @route('view=files') ?>" method="get" class="-koowa-grid">
+	<form action="<?= @route('view=sets') ?>" method="get" class="-koowa-grid">
+		
+		<div class="fields">
+			<label><?= @text('User name') ?>:</label>
+			<input type="text" name="title" />
+		</div>
+		
+		<div class="fields">
+			<label><?= @text('Password') ?>:</label>
+			<input type="password" name="password" />
+		</div>
 
-		<?= @helper('site::com.uploads.template.helper.listbox.sets', array('filter' => array('enabled' => '1'))) ?>
-		<input type="submit" value="Go" />
+		<div class="fields">
+			<input type="submit" value="Submit" />
+		</div>
+		
+		<?= $error ?>
 	</form>
 </div>
