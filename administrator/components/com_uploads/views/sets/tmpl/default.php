@@ -34,7 +34,7 @@
 		
 		<tfoot>
 			<tr>
-				<td colspan="99" align="center"><?= @helper('paginator.pagination'); ?></td>
+				<td colspan="5" align="center"><?= @helper('paginator.pagination'); ?></td>
 			</tr>
 		</tfoot>
 		
